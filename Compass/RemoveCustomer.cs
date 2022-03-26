@@ -16,6 +16,7 @@ namespace Compass
         compassdbEntities DB;
         BindingList<Customer> BL;
         SqlConnection con = new SqlConnection("server = .\\sqlexpress;database = compassdb;integrated security=True");
+       
         public RemoveCustomer()
         {
             InitializeComponent();
@@ -23,10 +24,7 @@ namespace Compass
             autoCompleteLastName();
         }
 
-        private void RemoveCustomer_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void autoCompleteFirstName()
         {
@@ -60,57 +58,87 @@ namespace Compass
             textLname.AutoCompleteCustomSource = Collection;
         }
 
-        private void buttonSearchID_Click(object sender, EventArgs e)
-        {
-            BL = new BindingList<Customer>();
-            DB = new compassdbEntities();
-            var cid = Convert.ToInt32(textCustomerID.Text);
-            var item = DB.Customer.Where(a => a.CustomerID == cid);
-            foreach (var i in item)
-            {
-                BL.Add(i);
-            }
-            dataGridView1.DataSource = BL;
-        }
+      
 
         private void buttonSearchFname_Click(object sender, EventArgs e)
         {
             BL = new BindingList<Customer>();
             DB = new compassdbEntities();
            
-            var item = DB.Customer.Where(a => a.FirstName == textFname.Text);
+            var item = DB.Customer.Where(a => a.FirstName == textFname.Text );
+         
             foreach (var i in item)
             {
                 BL.Add(i);
             }
             dataGridView1.DataSource = BL;
+            dataGridView1.Columns["Total"].DefaultCellStyle
+            .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["Commission"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["TicketFee"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["Tax"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
-        private void buttonSearchLname_Click(object sender, EventArgs e)
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+              
+                DB = new compassdbEntities();
+                var cid = Convert.ToInt32(labelID.Text);
+                Customer deleteCustomer = DB.Customer.First(a => a.CustomerID.Equals(cid));
+                DB.Customer.Remove(deleteCustomer);
+               
+                DB.SaveChanges();
+                MessageBox.Show("Customer Removed");
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DB = new compassdbEntities();
+            var cid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            var person = DB.Customer.First(a => a.CustomerID == cid);
+            labelID.Text = person.CustomerID.ToString();
+
+        }
+
+        private void buttonSearchLname_Click_1(object sender, EventArgs e)
         {
             BL = new BindingList<Customer>();
             DB = new compassdbEntities();
-          
+
             var item = DB.Customer.Where(a => a.LastName == textLname.Text);
             foreach (var i in item)
             {
                 BL.Add(i);
             }
             dataGridView1.DataSource = BL;
+            dataGridView1.Columns["Total"].DefaultCellStyle
+            .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["Commission"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["TicketFee"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["Tax"].DefaultCellStyle
+              .Alignment = DataGridViewContentAlignment.MiddleRight;
         }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void buttonSearchLname_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                BL.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                DB = new compassdbEntities();
-                var cid = Convert.ToInt32(textCustomerID.Text);
-                Customer customer = DB.Customer.First(a => a.CustomerID.Equals(cid));
-                DB.Customer.Remove(customer);
-                DB.SaveChanges();
-                MessageBox.Show("Customer Removed");
-            }
+           
+        }
+        private void buttonSearchID_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void RemoveCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

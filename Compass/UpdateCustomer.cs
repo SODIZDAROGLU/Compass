@@ -16,7 +16,8 @@ namespace Compass
         
         compassdbEntities DB;
         BindingList<Customer> BL;
-        SqlConnection con = new SqlConnection("server = .\\sqlexpress;database = compassdb;integrated security=True");
+       // SqlConnection con = new SqlConnection("server = .\\sqlexpress;database = compassdb;integrated security=True");
+        SqlConnection con = new SqlConnection(@"Data Source = .\sqlexpress;Initial Catalog = compassdb;integrated security=True");
 
         public UpdateCustomer()
         {
@@ -66,6 +67,7 @@ namespace Compass
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+            BL = new BindingList<Customer>();
             DB = new compassdbEntities();
             var cid = Convert.ToInt32(textCustomerID.Text);
             Customer updateCustomer = DB.Customer.First(a => a.CustomerID.Equals(cid));
@@ -85,8 +87,7 @@ namespace Compass
             updateCustomer.RecordDate = dateTimePicker1.Value;
 
             DB.SaveChanges();
-            BL = new BindingList<Customer>();
-            DB = new compassdbEntities();
+         
             var item = DB.Customer.Where(a => a.CustomerID == cid);
             foreach (var i in item)
             {

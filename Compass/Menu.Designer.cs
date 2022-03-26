@@ -41,7 +41,7 @@ namespace Compass
             // 
             this.labelMenu.AutoSize = true;
             this.labelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMenu.Location = new System.Drawing.Point(63, 28);
+            this.labelMenu.Location = new System.Drawing.Point(61, 41);
             this.labelMenu.Name = "labelMenu";
             this.labelMenu.Size = new System.Drawing.Size(178, 31);
             this.labelMenu.TabIndex = 9;
@@ -51,7 +51,7 @@ namespace Compass
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 194);
+            this.label4.Location = new System.Drawing.Point(63, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 20);
             this.label4.TabIndex = 8;
@@ -61,7 +61,7 @@ namespace Compass
             // 
             this.labelUpdateCustomer.AutoSize = true;
             this.labelUpdateCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUpdateCustomer.Location = new System.Drawing.Point(65, 158);
+            this.labelUpdateCustomer.Location = new System.Drawing.Point(63, 171);
             this.labelUpdateCustomer.Name = "labelUpdateCustomer";
             this.labelUpdateCustomer.Size = new System.Drawing.Size(165, 20);
             this.labelUpdateCustomer.TabIndex = 7;
@@ -71,7 +71,7 @@ namespace Compass
             // 
             this.labelRemoveCustomer.AutoSize = true;
             this.labelRemoveCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRemoveCustomer.Location = new System.Drawing.Point(65, 122);
+            this.labelRemoveCustomer.Location = new System.Drawing.Point(63, 135);
             this.labelRemoveCustomer.Name = "labelRemoveCustomer";
             this.labelRemoveCustomer.Size = new System.Drawing.Size(171, 20);
             this.labelRemoveCustomer.TabIndex = 6;
@@ -81,7 +81,7 @@ namespace Compass
             // 
             this.labelAddCustomer.AutoSize = true;
             this.labelAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddCustomer.Location = new System.Drawing.Point(65, 86);
+            this.labelAddCustomer.Location = new System.Drawing.Point(63, 99);
             this.labelAddCustomer.Name = "labelAddCustomer";
             this.labelAddCustomer.Size = new System.Drawing.Size(138, 20);
             this.labelAddCustomer.TabIndex = 5;
@@ -91,7 +91,7 @@ namespace Compass
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 231);
+            this.label1.Location = new System.Drawing.Point(63, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 10;
