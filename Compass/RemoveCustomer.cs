@@ -24,7 +24,7 @@ namespace Compass
             autoCompleteLastName();
         }
 
-      
+
 
         private void autoCompleteFirstName()
         {
@@ -58,7 +58,7 @@ namespace Compass
             textLname.AutoCompleteCustomSource = Collection;
         }
 
-      
+
 
         private void buttonSearchFname_Click(object sender, EventArgs e)
         {
@@ -138,7 +138,6 @@ namespace Compass
         }
         private void RemoveCustomer_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

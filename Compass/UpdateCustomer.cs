@@ -17,7 +17,7 @@ namespace Compass
         compassdbEntities DB;
         BindingList<Customer> BL;
        // SqlConnection con = new SqlConnection("server = .\\sqlexpress;database = compassdb;integrated security=True");
-        SqlConnection con = new SqlConnection(@"Data Source = .\sqlexpress;Initial Catalog = compassdb;integrated security=True");
+       SqlConnection con = new SqlConnection(@"Data Source = .\sqlexpress;Initial Catalog = compassdb;integrated security=True");
 
         public UpdateCustomer()
         {

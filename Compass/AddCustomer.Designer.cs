@@ -99,7 +99,7 @@ namespace Compass
             // 
             this.richTextBox1.Location = new System.Drawing.Point(589, 55);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(409, 295);
+            this.richTextBox1.Size = new System.Drawing.Size(211, 248);
             this.richTextBox1.TabIndex = 52;
             this.richTextBox1.Text = "";
             // 

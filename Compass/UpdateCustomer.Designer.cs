@@ -88,7 +88,7 @@ namespace Compass
             // 
             this.richTextBox1.Location = new System.Drawing.Point(760, 79);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(404, 188);
+            this.richTextBox1.Size = new System.Drawing.Size(212, 188);
             this.richTextBox1.TabIndex = 80;
             this.richTextBox1.Text = "";
             // 
@@ -316,7 +316,7 @@ namespace Compass
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 293);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1217, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(1195, 326);
             this.dataGridView1.TabIndex = 84;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -393,7 +393,7 @@ namespace Compass
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(877, 625);
+            this.buttonClear.Location = new System.Drawing.Point(366, 625);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 93;
