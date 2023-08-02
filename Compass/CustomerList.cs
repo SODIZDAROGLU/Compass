@@ -28,6 +28,7 @@ namespace Compass
             DB = new compassdbEntities();
             var item = DB.Customer.ToList();
             dataGridView1.DataSource = item;
+
             dataGridView1.Columns["Total"].DefaultCellStyle
            .Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns["Commission"].DefaultCellStyle
